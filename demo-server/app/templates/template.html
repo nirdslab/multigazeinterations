@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{% block title %}{% endblock %}</title>
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation"><a href="/">Home</a></li>
+            <li role="presentation"><a href="/image-upload">Image Upload</a></li>
+            <li role="presentation"><a href="/webcam-streaming">Webcam Streaming</a></li>
+            <li role="presentation"><a href="https://nirdslab.github.io/multigazeinterations/" target="_blank">Docs</a></li>
+          </ul>
+        </nav>
+      </div>
+      {% block body %}
+      {% endblock %}
+      <footer class="footer">
+        <p>© 2016 NirdsLab, ODU</p>
+      </footer>
+    </div> <!-- /container -->
+    <script>
+      {% block script %}
+      {% endblock %}
+    </script>
+    <script async src="https://docs.opencv.org/master/opencv.js" onload="onOpenCvReady();" type="text/javascript"></script>
+  </body>
+</html>

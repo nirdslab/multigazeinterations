@@ -1,0 +1,71 @@
+{% extends "template.html" %}
+{% block title %}Image Upload{% endblock %}
+{% block body %}
+
+<div class="row">
+  <div class="col">
+
+      <h1>Upload an image</h1>
+      <hr>
+
+      <form action="/image-upload" method="POST" enctype="multipart/form-data">
+
+        <div class="form-group">
+          <label>Select image</label>
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" name="image" id="image">
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Upload</button>
+
+      </form>
+
+    </div>
+</div>
+<canvas id="canvasOutput" ></canvas>
+
+{% endblock %}
+
+{% block script %}
+{% if not image == None %}
+    x = {{ image }};
+{% else %}
+    x = "";
+{% endif %}
+
+function onOpenCvReady(){
+
+    if(x!= ""){
+        show_image(x)
+    }
+}
+
+function show_image(img){
+    var ctx = document.querySelector("#canvasOutput").getContext("2d");
+
+    var height = img.length;
+    var width = img[0].length;
+
+    ctx.canvas.height = height;
+    ctx.canvas.width = width;
+
+    var h = ctx.canvas.height;
+    var w = ctx.canvas.width;
+
+    var imgData = ctx.getImageData(0, 0, w, h);
+    var data = imgData.data;  // the array of RGBA values
+
+    for(var i = 0; i < height; i++) {
+        for(var j = 0; j < width; j++) {
+            var s = 4 * i * w + 4 * j;  // calculate the index in the array
+            var x = img[i][j];  // the RGB values
+            data[s] = x[0];
+            data[s + 1] = x[1];
+            data[s + 2] = x[2];
+            data[s + 3] = 255;  // fully opaque
+        }
+    }
+
+    ctx.putImageData(imgData, 0, 0);
+}
+{% endblock %}
