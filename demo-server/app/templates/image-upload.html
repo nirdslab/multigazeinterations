@@ -59,13 +59,21 @@ function show_image(img){
         for(var j = 0; j < width; j++) {
             var s = 4 * i * w + 4 * j;  // calculate the index in the array
             var x = img[i][j];  // the RGB values
-            data[s] = x[0];
-            data[s + 1] = x[1];
-            data[s + 2] = x[2];
+
+            avg = (x[0] + x[1] + x[2]) / 3;
+            data[s] = avg;
+            data[s + 1] = avg;
+            data[s + 2] = avg;
+
+            // Check code
+            //data[s] = x[0];
+            //data[s + 1] = x[1];
+            //data[s + 2] = x[2];
             data[s + 3] = 255;  // fully opaque
         }
     }
 
     ctx.putImageData(imgData, 0, 0);
+    grayScale(context, canvas);
 }
 {% endblock %}
