@@ -20,25 +20,28 @@ Source : [https://github.com/nirdslab/multigazeinterations](https://github.com/n
   * Reduce the number of false positive detections with the application of Haar cascade filters and artistic heuristics  
   * Easy to install with just a few command lines  
 
-## Running from Source
+## Running the Python code from Source
+The users may run the Multi Gaze Interactions application from any machine. However, there are a couple of requirements that need to be met in advance. Since, the application was implemented using Python3, and it requires the machine to have **Python 3.7** or  higher installed. It also requires **'pip' version 19.3 or higher**. 
 
-#### Requirements: 
-  * Python 3.7 or higher
-  * Pip 19.3 or higher
-  
-#### Clone the source
+### Step by step instructions
+**1. Get the source code**  
+There are 2 ways to obtain the source code for the application, which are :     
+  * Downloand the zip file from [our respository](https://github.com/nirdslab/multigazeinterations)  
+  * Clone the source code from Git repository by entering the below commamnd line.   
 
 ```shell 
 git clone https://github.com/nirdslab/multigazeinterations.git
 ```
 
 #### Install Dependencies
+The application requires some dependencies in which they can be installed by using the below command line.   
+
 ```shell 
 pip3 install -r requirements.txt 
 ```
 
 #### Runnning Application
-
+Once the users make sure that webcam is appropriately connected, they are ready to run the Python code using the below command in order to use the Multi Gaze Interactions application in real-time. 
 ```shell
 # Realtime Gaze tracking with webcam (or equivalent)
 python realtime.py 
