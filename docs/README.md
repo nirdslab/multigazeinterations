@@ -17,6 +17,10 @@ The Multi Gaze Interactions was written solely in Python3. Therefore, if the use
 Source : [https://github.com/nirdslab/multigazeinterations](https://github.com/nirdslab/multigazeinterations)
 
 ## Online Demo
+
+Through online demo, gaze information for a image can be obtained for a given image.
+
+Online Demo: [https://mgaze.nirds.cs.odu.edu/](https://mgaze.nirds.cs.odu.edu/)
   
   
 ## Desktop Demo Application
