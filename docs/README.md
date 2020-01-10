@@ -46,12 +46,10 @@ Once the users make sure that webcam is appropriately connected, they are ready 
 # Realtime Gaze tracking with webcam (or equivalent)
 python realtime.py 
 ```
-
+For testing purposes, the users may use this application on any images.  The code block below illustrates the commands needed. Though, the users require to specify the proper image path.  For example,  if the users want to use the image name `test.jpg`, the users need to enter  `python image_test.py test.jpg` to the command prompt. 
 ```shell 
 # Testing gaze tracking on images
 python image_test.py <image path>
-# Example
-python image_test.py test.jpg
 ```
 
 ## API Usage
