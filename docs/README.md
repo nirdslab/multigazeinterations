@@ -7,9 +7,10 @@ In the initial step of facial features detection, the Haarcascade filters was us
 ![Haarcascade filters only](./img/unnamed.jpg)  
 
 The Artistic Heuristics can assist in getting rid of false-positives or at least reducing the number of false-positives.  Facial detection using Artistic Heuristics is a method of using relative location to determine facial features. By drawing vertical lines over a face by equally splitting a human face into five sections, the site of eyes in a human face should be between the 1/5th, 4/5th lines, and they must be next to the mid-line as illustrated in the below image.   
-![Facial Artistic Heuristics](./img/dp2.jpg)  
+![Facial Artistic Heuristics](./img/dp2.jpg)    
 
-
+After applying the Artistic Heuristics technique, the number of false-positive is reduced significantly, as portrayed in the image beneath.   
+![With Artistic Heuristics](./img/sample-class-horizontal-gaze.jpg)  
 
 The Multi Gaze Interactions was written solely in Python3. Therefore, if the users have Python installed already on the machine, it is a matter of a couple of command lines the Multi Gaze Interactions application is ready to be used. To run the application, the users need to connect their webcams and enter a command for the Python code to run. 
 
