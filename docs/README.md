@@ -16,20 +16,26 @@ The Multi Gaze Interactions was written solely in Python3. Therefore, if the use
 
 Source : [https://github.com/nirdslab/multigazeinterations](https://github.com/nirdslab/multigazeinterations)
 
-## Online Demo
+## Architectural Design of The Multi Gaze Interactions  
+
+![System design](./img/system-design.png)  
+
+The mainworker initially accesses the share information to checkthe face trackers registered and their information. Basedon the information present in the shared information store,the main worker publishes image patches known as a faceprobable region to each worker. Subsequently the mainworker masks the published regions in the image frame andscans the entire image to detect un-tracked faces that mightappear in the frame. For each un-tracked frame detected,the main worker forms a new thread and assign the task oftracking the faces. In case of termination of tracking work-ers, the information relating to the termination will be pub-lished to the main worker. The main worker will then updatethe shared information store by removing the entry corre-sponding to the worker. In the event of a new frame beingavailable to the application, the region tracked by the termi-nated worker would be automatically added to the scanningregion for new faces.  
+
+## Online Demo  
 
 Through online demo, gaze information for a image can be obtained for a given image.
 
 Online Demo: [https://mgaze.nirds.cs.odu.edu/](https://mgaze.nirds.cs.odu.edu/)
   
   
-## Desktop Demo Application
+## Desktop Demo Application  
   * The application that tracks the multi-users gaze compatible with any standard webcams  
   * Less initial calibration  
   * Reduce the number of false positive detections with the application of Haar cascade filters and artistic heuristics  
   * Easy to install with just a few command lines  
 
-## Running the Python code from Source
+## Running the Python code from Source  
 The users may run the Multi Gaze Interactions application from any machine. However, there are a couple of requirements that need to be met in advance. Since, the application was implemented using Python3, and it requires the machine to have **Python 3.7** or  higher installed. It also requires **'pip' version 19.3 or higher**. 
 
 ### Step by step instructions
