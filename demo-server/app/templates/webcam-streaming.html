@@ -1,7 +1,28 @@
 {% extends "template.html" %}
 {% block title %}About{% endblock %}
 {% block body %}
-<div class="jumbotron">
-  <p>Webcam Streaming will be available soon</p>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <p>
+        The following demo of the Heuristic based Multi-gaze interactions have been ported from the original desktop based implementation
+        to support web cam driven multi user interactions through web browsers. The performance of the application can vary with the speed of
+        internet connection (Processing is done only in the server-side) and the quality of the web camera.
+        In the current implementation, we perform the gaze recognition in sequence( capture, process, show, capture next),
+        as a result the video stream has no continuous nature.
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <p>Webcam Stream Extracted</p>
+    <video autoplay id="myVideo"></video>
+  </div>
+  <div class="row">
+    <p>Gaze prediction</p>
+    <canvas id="canvasOutput" ></canvas>
+  </div>
 </div>
+
+<script src="{{ url_for('static', filename = 'js/mediacapture.js') }}?{{ range(1, 51) | random }}" type="text/javascript"></script>
 {% endblock %}
