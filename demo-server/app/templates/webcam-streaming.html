@@ -15,13 +15,31 @@
     </div>
   </div>
   <div class="row">
-    <p>Webcam Stream Extracted</p>
-    <video autoplay id="myVideo"></video>
+      <div class="col-md-6" style="position: relative; z-index: 10">
+          <div class="thumbnail">
+              <div class="embed-responsive embed-responsive-16by9">
+                  <canvas id="canvasOutput" class="embed-responsive-item"></canvas>
+              </div>
+              <div class="caption">
+                  <p>Gaze prediction</p>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-6" style="position: relative; z-index: 10">
+          <div class="thumbnail">
+              <div class="embed-responsive embed-responsive-16by9">
+                  <video autoplay class="embed-responsive-item" id="myVideo"></video>
+              </div>
+              <div class="caption">
+                  <p>Extracted Webcam stream</p>
+              </div>
+          </div>
+      </div>
   </div>
-  <div class="row">
-    <p>Gaze prediction</p>
-    <canvas id="canvasOutput" ></canvas>
-  </div>
+{#  <div class="row">#}
+{#    <p>Gaze prediction</p>#}
+{#    <canvas id="canvasOutput" ></canvas>#}
+{#  </div>#}
 </div>
 
 <script src="{{ url_for('static', filename = 'js/mediacapture.js') }}?{{ range(1, 51) | random }}" type="text/javascript"></script>
