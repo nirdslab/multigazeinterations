@@ -9,13 +9,76 @@
 
 <div class="container">
   <div class="row">
-    <div class="col">
-      <p>
-        Multi Gaze Interactions provides multi user gaze tracking using any common camera in real time. The application includes
-        a pretained model (trained using Columbia Gaze Dataset: <a href="http://www.cs.columbia.edu/CAVE/databases/columbia_gaze/">
-        http://www.cs.columbia.edu/CAVE/databases/columbia_gaze/</a>)
-        for gaze prediction and Haar cascade filters for face and facial feature detection.
-      </p>
+      <div class="col-sm-4">
+          <h2>About Multi Gaze Interactions</h2>
+          <div class="fakeimg">
+              <img src="{{ url_for('static', filename = 'images/live-image.png') }}" class="img-thumbnail" alt="Cinque Terre">
+          </div>
+          <p>Multi Gaze interactions provide realtime user gaze tracking using common camera modules with no prior calibration.</p>
+          <h4>Useful Links</h4>
+          <ul class="nav nav-pills flex-column">
+              <li class="nav-item">
+                  <a class="nav-link" href="https://nirdslab.github.io/multigazeinterations/" target="_blank">Docs</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/nirdslab/multigazeinterations" target="_blank">Source</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="https://nirdslab.github.io/" target="_blank">NirdsLab</a>
+              </li>
+          </ul>
+      </div>
+      <div class="col-sm-8">
+          <h2><a href="/webcam-streaming.html">Webcam Streaming - NEW!!</a> </h2>
+          <h6>Jan 15, 2020</h6>
+{#          <div class="fakeimg">Fake Image</div>#}
+          <p>
+              he following demo of the Heuristic based Multi-gaze interactions have been ported from the original desktop
+              based implementation to support web cam driven multi user interactions through web browsers.
+              <a href="/webcam-streaming.html">Check it out!!</a>
+          </p>
+          <hr>
+
+          <h2><a href="/image-upload.html">MGaze Image Testing</a></h2>
+          <h6>Jan 7, 2020</h6>
+          <div class="fakeimg">
+              <img src="{{ url_for('static', filename = 'images/sample-class-vertical-gaze.jpg') }}" class="img-thumbnail" alt="Cinque Terre">
+          </div>
+          <p>
+              Now you can test gaze predictions for images on web through image uploads.
+              <a href="/image-upload.html">
+                  Check it out!!
+              </a>
+          </p>
+          <hr>
+
+          <h2>MGaze desktop</h2>
+{#          <h6>Title description, Dec 7, 2017</h6>#}
+          <div class="fakeimg">
+              <img src="{{ url_for('static', filename = 'images/live-image.png') }}" class="img-thumbnail" alt="Cinque Terre">
+          </div>
+          <p>
+              MGaze now supports desktop based eye tracking.
+              <a href="https://nirdslab.github.io/multigazeinterations/">
+                  Read docs to set it on your machine!!
+              </a>
+          </p>
+          <hr>
+
+          <h2>About (MGaze) Multi Gaze Interactions</h2>
+{#          <h6>Title description, Dec 7, 2017</h6>#}
+          <div class="fakeimg">
+              <img src="{{ url_for('static', filename = 'images/sample-class-horizontal-gaze.jpg') }}" class="img-thumbnail" alt="Cinque Terre">
+          </div>
+          <p>
+              Multi Gaze Interactions provides multi user gaze tracking using any common camera in real time. The application includes
+              a pretained model (trained using Columbia Gaze Dataset: <a href="http://www.cs.columbia.edu/CAVE/databases/columbia_gaze/">
+              http://www.cs.columbia.edu/CAVE/databases/columbia_gaze/</a>)
+              for gaze prediction and Haar cascade filters for face and facial feature detection.
+          </p>
+          <hr>
+      </div>
+
     </div>
   </div>
 </div>
