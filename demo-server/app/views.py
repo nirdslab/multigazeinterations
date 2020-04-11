@@ -46,6 +46,11 @@ def image_upload():
 def webcam_streaming():
     return render_template("webcam-streaming.html")
 
+
+@app.route('/v2')
+def v2():
+    return render_template('webcam.html')
+
 @app.route('/frame-process', methods=["POST"])
 def frame_process():
     g = HeuristicGazeClassifier()
@@ -69,4 +74,6 @@ def frame_process():
         img = img.tolist()
         return json.dumps(img)
     return jsonify([])
+
+
 
