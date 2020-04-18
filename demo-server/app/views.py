@@ -13,7 +13,6 @@ def index():
 
 @app.route('/image-upload', methods=["GET", "POST"])
 def image_upload():
-
     if request.method == "POST":
         g = HeuristicGazeClassifier()
 
@@ -47,9 +46,15 @@ def webcam_streaming():
     return render_template("webcam-streaming.html")
 
 
+@app.route('/gazenet-browser')
+def gazenet_browser():
+    return render_template('webcam.html')
+
+# Remove later - For previously shared links
 @app.route('/v2')
 def v2():
     return render_template('webcam.html')
+
 
 @app.route('/frame-process', methods=["POST"])
 def frame_process():
@@ -74,6 +79,3 @@ def frame_process():
         img = img.tolist()
         return json.dumps(img)
     return jsonify([])
-
-
-
