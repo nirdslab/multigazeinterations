@@ -148,8 +148,8 @@ function draw_tensor(tensorData, tensorShape, context) {
 
 
 function sliceImage(tensor, centrex, centrey){
-    const startx = Math.max(centrex - 18, 0);
-    const starty = Math.max(centrey - 30, 0);
+    const startx = Math.float(Math.max(centrex - 18, 0));
+    const starty = Math.float(Math.max(centrey - 30, 0));
     return frame.slice([startx, starty, 0], [36, 60, 1]);
 }
 
