@@ -36,7 +36,7 @@ pyqtgraph==0.10.0
 python-dateutil==2.8.1
 python-louvain==0.13
 pytz==2019.3
-PyYAML==5.3
+PyYAML==5.4
 requests==2.22.0
 scikit-learn==0.22.1
 scipy==1.4.1
