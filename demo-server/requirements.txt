@@ -42,7 +42,7 @@ scikit-learn==0.22.1
 scipy==1.4.1
 serverfiles==0.3.0
 six==1.13.0
-urllib3==1.25.7
+urllib3==1.26.5
 xlrd==1.2.0
 XlsxWriter==1.2.7
 zipp==0.6.0
