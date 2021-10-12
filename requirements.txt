@@ -23,7 +23,7 @@ msgpack==0.6.2
 networkx==2.4
 numba==0.47.0
 numpy==1.18.0
-opencv-python==4.1.2.30
+opencv-python==4.2.0.32
 openpyxl==3.0.2
 openTSNE==0.3.12
 orange-canvas-core==0.1.10
